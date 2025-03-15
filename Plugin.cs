@@ -249,7 +249,7 @@ class SurrenderState
             var ratio = ((double)surrenderYes) / totalPlayers;
             var required = Plugin.Instance.Config.RequiredVotes.Value;
 
-            Plugin.Instance.Logger.LogDebug($"Vote count result: {ratio}, {(int)(required * 100)}%, {ratio >= required}");
+            Plugin.Instance.Logger.LogDebug($"Vote count result: {ratio}, {(int)Math.Round(required * 100)}%, {ratio >= required}");
 
             if (ratio >= required)
             {
@@ -258,7 +258,7 @@ class SurrenderState
             }
             else
             {
-                Wrapper.SendMessageToFaction(Faction, $"Surrender vote has failed ({surrenderYes}/{totalPlayers}), Required: {(int)(required * 100)}%", GameManager.LocalPlayer);
+                Wrapper.SendMessageToFaction(Faction, $"Surrender vote has failed ({surrenderYes}/{totalPlayers}), Required: {(int)Math.Round(required * 100)}%", GameManager.LocalPlayer);
             }
 
             Timer.StartCooldown();
