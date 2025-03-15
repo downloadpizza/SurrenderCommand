@@ -2,14 +2,21 @@
 
 You need BepinEx 5 installed for Nuclear Option and [Muj's Command Mod](https://github.com/muji2498/CommandMod)
 
-Just throw the dll into your plugins folder. Now whenever you are host, there will be a !whisper target message command available to everyone.
+Just throw the dll into your plugins folder. Now whenever you are host, there will be a !surrender and !nosurrender command available to everyone.
 
-# Whispering to people with Spaces
+# Surrendering
 
-Only the first argument of the command is used for the playername. It accepts a glob pattern with ? for any single character and * for any amount of characters.
+Run !surrender to start a vote.
 
-So `Down ê Load    Pizza` can be written as `Down???Load*Pizza`. You could also just do `Down*` if you are sure no one else on the server starts with Down.
-Names are case sensitive atm. This may change.
+# Config
+
+The Host can modify: 
+- How long the game needs to be running before a surrender vote can be started.
+- What percentage of the team is required for a surrender.
+- How much cooldown between surrenders
+- How long to wait to default people to "nosurrender"
+
+Check the relevant BepinEx/configs file
 
 # Contributing
 
