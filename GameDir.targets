@@ -1,0 +1,5 @@
+<Project>
+    <PropertyGroup>
+        <GameDir>YOURDIR\steamapps\common\Nuclear Option</GameDir>
+    </PropertyGroup>
+</Project>
